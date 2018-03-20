@@ -1,0 +1,2 @@
+* * * * * /root/./ct_check_v02.sh
+* * * * * /root/./failcnt_count.sh
