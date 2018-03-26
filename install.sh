@@ -15,5 +15,5 @@ cp agent_scripts/ct_failcnt_value.sh /etc/zabbix/scripts/
 chmod -R +x /etc/zabbix/scripts
 
 
-cp ct_check_v02.sh /root/ct_check_v02.sh
-cp ailcnt_count.sh /root/failcnt_count.sh
+cp ct_check_v02.sh /root/ct_check_v02.sh && chmod -R +x /root/ct_check_v02.sh
+cp ailcnt_count.sh /root/failcnt_count.sh && chmod -R +x /root/failcnt_count.sh
