@@ -1,7 +1,7 @@
 # OpenVZ_ct_monitoring
 Мониторинг контейнеров OpenVZ  
 
-######Установка:  ######
+###  Установка:  ###
 git clone https://github.com/GithubcomRoman/OpenVZ_ct_monitoring.git  
 cd OpenVZ_ct_monitoring/  
 chmod +x install.sh  
@@ -33,7 +33,7 @@ chmod +x install.sh
 othersockbuf779  
 othersockbuf8888  
 
-######Расшифровка параметров (https://wiki.openvz.org/UBC_parameters_table)  ######
+###  Расшифровка параметров (https://wiki.openvz.org/UBC_parameters_table)  ###
 numproc - Максимальное количество процессов и тредов (потоков).  
 numothersock - Максимальное количество TCP-сокетов.  
 vmguarpages - Гарантированный объем оперативной памяти, которая может быть запрошена стандартными механизмами резервирования памяти в Linux.  
