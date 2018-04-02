@@ -17,6 +17,7 @@ chmod -R +x /etc/zabbix/scripts
 
 cp ct_check_v02.sh /root/ct_check_v02.sh && chmod -R +x /root/ct_check_v02.sh
 cp failcnt_count.sh /root/failcnt_count.sh && chmod -R +x /root/failcnt_count.sh
+cp vzubc_custom.sh /usr/sbin/vzubc_custom & chmod -R +x /usr/sbin/vzubc_custom
 
 #-----------------| Check install. Checking the availability of files. |--------------------|
 
@@ -32,6 +33,7 @@ FILE[4]="/etc/zabbix/scripts/ct_failcnt_name.sh"
 FILE[5]="/etc/zabbix/scripts/ct_failcnt_value.sh"
 FILE[6]="/root/ct_check_v02.sh"
 FILE[7]="/root/failcnt_count.sh"
+FILE[8]="/usr/sbin/vzubc_custom"
 
 echo "|--Check openZV config for Zabbix Agent..."
 if [ ! -f "${FILE[1]}" ]; then
