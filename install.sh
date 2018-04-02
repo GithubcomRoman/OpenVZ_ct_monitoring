@@ -1,5 +1,11 @@
 #!/bin/bash
 # install.sh - copy files for OpenVZ_ct_mon
+
+#Create directories
+mkdir -p /etc/zabbix/zabbix_agentd.d/
+mkdir -p /etc/zabbix/scripts/
+
+
 #Zabbix agent 
 cp agent_conf/open_vz.conf /etc/zabbix/zabbix_agentd.d/
 
