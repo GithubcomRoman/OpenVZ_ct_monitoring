@@ -21,9 +21,9 @@ cp agent_scripts/ct_failcnt_value.sh /etc/zabbix/scripts/
 chmod -R +x /etc/zabbix/scripts
 
 
-cp ct_check_v02.sh /root/ct_check_v02.sh && chmod -R +x /root/ct_check_v02.sh
-cp failcnt_count.sh /root/failcnt_count.sh && chmod -R +x /root/failcnt_count.sh
-cp vzubc_custom.sh /usr/sbin/vzubc_custom & chmod -R +x /usr/sbin/vzubc_custom
+cp ct_check_v02.sh /root/ct_check_v02.sh && chmod +x /root/ct_check_v02.sh
+cp failcnt_count.sh /root/failcnt_count.sh && chmod +x /root/failcnt_count.sh
+cp vzubc_custom.sh /usr/sbin/vzubc_custom && chmod +x /usr/sbin/vzubc_custom
 
 #-----------------| Check install. Checking the availability of files. |--------------------|
 
