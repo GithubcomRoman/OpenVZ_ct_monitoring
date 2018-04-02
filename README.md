@@ -2,7 +2,9 @@
 Мониторинг контейнеров OpenVZ
 
 Установка:
+***
 git clone https://github.com/GithubcomRoman/OpenVZ_ct_monitoring.git
+***
 cd OpenVZ_ct_monitoring/
 chmod +x install.sh
 ./install.sh
