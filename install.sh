@@ -27,7 +27,7 @@ cp vzubc_custom.sh /usr/sbin/vzubc_custom && chmod +x /usr/sbin/vzubc_custom
 
 #-----------------| Check install. Checking the availability of files. |--------------------|
 
-echo "|--Check Zabbix Agent activ..."
+echo "|-- Zabbix Agent status:"
 
 
 [ "$(pgrep zabbix)" ] && echo "+OK - Zabbix agent run" || echo "-FAIL - Zabbix agent run"
@@ -64,3 +64,34 @@ if [ ! -f "${FILE[$count]}" ]; then
 fi
 
 done
+
+#add task to root crontab
+
+OpenVZ7_CRON="/var/spool/cron/root"
+DEBIAN8_CRON="/var/spool/cron/crontabs/root"
+
+if [ ! -f "${OpenVZ7_CRON}" ]; then
+        CRONFILE="${OpenVZ7_CRON}"
+        else
+        CRONFILE="${DEBIAN8_CRON}"
+fi
+
+inform_1="# OpenVZ monitoring"
+task1="* * * * * /root/./ct_check_v02.sh"
+task2="* * * * * /root/./failcnt_count.sh"
+
+echo "${inform_1}" >> ${CRONFILE}
+echo "${task1}" >> ${CRONFILE}
+echo "${task2}" >> ${CRONFILE}
+
+if [[ `grep "ct_check" "${CRONFILE}"` ]]; then
+echo "+OK - add task to root crontab"
+else 
+echo "-FAIL - add task to root crontab. Make it manual."
+echo "Add:"
+echo "${task1}"
+echo "${task2}"
+
+fi
+
+
