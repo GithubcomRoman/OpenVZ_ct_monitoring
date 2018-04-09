@@ -21,6 +21,7 @@
         +OK - /root/ct_check_v02.sh  
         +OK - /root/failcnt_count.sh  
         +OK - /usr/sbin/vzubc_custom  
+		+OK - add task to root crontab
 
 **Добавить в cron строки**  
 Установка в cron происходит автоматически, но если что-то пошло не так, скрипт об этом сообщит и надо будет вручную добавить следующие строки: 
