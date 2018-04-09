@@ -1,12 +1,12 @@
 #!/bin/bash
-#CT CHECK v0.2 07.03.2018 :: file ct_check_v02.sh
+#CT CHECK v0.2 09.04.2018 :: file ct_check_v02.sh
 echo "" > /etc/zabbix/scripts/ct_param_value.txt
 
 vz=`/usr/sbin/vzlist | awk '{print $1}' | grep -e "[[:digit:]]"`
 
 for machine in $vz; do
-                                        /usr/sbin/vzubc_custom $machine | awk '{print $1,$3}' > vz.tmp
-                                        counters=`cat vz.tmp | sed 's/M//' | sed 's/K//' | sed 's/G//'`
+                                        /usr/sbin/vzubc_custom $machine | awk '{print $1,$3}' > /tmp/vz.tmp
+                                        counters=`cat /tmp/vz.tmp | sed 's/M//' | sed 's/K//' | sed 's/G//'`
 
                 for param in $counters; do
 
