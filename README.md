@@ -9,19 +9,24 @@
 
 Успешная установка выглядит вот так:  
 
-        |--Check Zabbix Agent activ...  
-        +OK - Zabbix agent run  
-        |--Check openZV config for Zabbix Agent...  
-        +OK - /etc/zabbix/zabbix_agentd.d/open_vz.conf  
-        |--Check scripts for Zabbix Agent...  
-        +OK - /etc/zabbix/scripts/ct_param_name.sh  
-        +OK - /etc/zabbix/scripts/ct_param_value.sh  
-        +OK - /etc/zabbix/scripts/ct_failcnt_name.sh  
-        +OK - /etc/zabbix/scripts/ct_failcnt_value.sh  
-        +OK - /root/ct_check_v02.sh  
-        +OK - /root/failcnt_count.sh  
-        +OK - /usr/sbin/vzubc_custom  
-		+OK - add task to root crontab
+        |-- Zabbix Agent status:
+	+OK - Zabbix agent run
+	|--Check openZV config for Zabbix Agent...
+	+OK - /etc/zabbix/zabbix_agentd.d/open_vz.conf
+	|--Check scripts for Zabbix Agent...
+	+OK - /etc/zabbix/scripts/ct_param_name.sh
+	+OK - /etc/zabbix/scripts/ct_param_value.sh
+	+OK - /etc/zabbix/scripts/ct_failcnt_name.sh
+	+OK - /etc/zabbix/scripts/ct_failcnt_value.sh
+	+OK - /root/ct_check_v02.sh
+	+OK - /root/failcnt_count.sh
+	+OK - /usr/sbin/vzubc_custom
+	+OK - add task to root crontab
+
+		
+**Перезагрузить Zabbix Agent **	
+
+	systemctl restart zabbix-agent
 
 **Добавить в cron строки**  
 Установка в cron происходит автоматически, но если что-то пошло не так, скрипт об этом сообщит и надо будет вручную добавить следующие строки: 
