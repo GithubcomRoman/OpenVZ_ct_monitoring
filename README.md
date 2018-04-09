@@ -23,8 +23,7 @@
 	+OK - /usr/sbin/vzubc_custom
 	+OK - add task to root crontab
 
-		
-**Перезагрузить Zabbix Agent **	
+**Перезагрузить Zabbix Agent**	
 
 	systemctl restart zabbix-agent
 
