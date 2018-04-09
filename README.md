@@ -9,7 +9,7 @@
 
 Успешная установка выглядит вот так:  
 
-        |-- Zabbix Agent status:
+	|-- Zabbix Agent status:
 	+OK - Zabbix agent run
 	|--Check openZV config for Zabbix Agent...
 	+OK - /etc/zabbix/zabbix_agentd.d/open_vz.conf
