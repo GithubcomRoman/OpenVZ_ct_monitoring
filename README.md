@@ -43,6 +43,8 @@
         numiptent779 20  
         kmemsize8888 38.3  
         privvmpages8888 1.33  
+		
+
 _______________________________________________________  
 
 Добавть шаблон в заббикс и применить его к хост-машине с контейнерами - https://github.com/GithubcomRoman/OpenVZ_ct_monitoring/blob/master/template/OpenVZ_ct_param.xml
